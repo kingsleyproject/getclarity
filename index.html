@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity - Tame Your Digital Shame Pile</title>
+    <style>
+        /* Modern CSS Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f8fafc;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1e40af;
+            margin: 2.5rem 0 1.5rem 0;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+        }
+        /* Sections */
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        /* Buttons & Form */
+        .button {
+            background: #2563eb;
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
+        .button:hover {
+            background: #1d4ed8;
+        }
+        input[type="email"] {
+            width: 100%;
+            max-width: 350px;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        .trust-note {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 1.5rem;
+        }
+        .text-center {
+            text-align: center;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            h1 { font-size: 2rem; }
+            .section { padding: 2rem; margin: 2rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="section hero">
+            <h1>Tame Your Digital Shame Pile.</h1>
+            <p>Get one calm, curated daily briefing from the chaos of your inbox, podcasts, and saved content.</p>
+            <button class="button">Join the Waitlist</button>
+            <p class="trust-note">Join thousands reclaiming their focus.</p>
+        </section>
+
+        <!-- How it Works -->
+        <section class="section">
+            <h2>How it works</h2>
+            <p><strong>Connect</strong> your apps in minutes.</p>
+            <p><strong>Curate</strong> with AI that summarizes and prioritizes.</p>
+            <p><strong>Conquer</strong> your day with a single briefing.</p>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section text-center">
+            <h2>Ready to Find Your Clarity?</h2>
+            <form>
+                <input type="email" placeholder="Your email address" required>
+                <br>
+                <button type="submit" class="button">Join Now</button>
+            </form>
+            <p class="trust-note">Your data is yours. We never sell it.</p>
+        </section>
+    </div>
+</body>
+</html>
