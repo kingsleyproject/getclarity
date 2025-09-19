@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity - Tame Your Digital Shame Pile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #2563eb;
+            --color-primary-dark: #1d4ed8;
+            --color-secondary: #059669;
+            --color-text: #1f2937;
+            --color-text-light: #6b7280;
+            --color-background: #f8fafc;
+            --color-white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            background-image: 
+                radial-gradient(at top right, rgba(167, 139, 250, 0.15) 0%, transparent 50%),
+                radial-gradient(at bottom left, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        .text-center { text-align: center; }
+
+        /* Typography */
+        h1 { font-size: 3rem; font-weight: 800; color: var(--color-primary); margin-bottom: 1.5rem; line-height: 1.2; }
+        h2 { font-size: 2rem; font-weight: 700; color: var(--color-primary); margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; font-weight: 600; color: var(--color-text); margin-bottom: 1rem; }
+        p { font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 1.5rem; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .container { padding: 1.5rem; }
+        }
+
+        /* Sections & Cards */
+        .section { margin: 5rem 0; }
+        .card {
+            background: var(--color-white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .hero-card { text-align: center; }
+
+        /* Buttons & Inputs */
+        .button {
+            background: var(--color-primary);
+            color: white;
+            padding: 1.1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+        }
+        .button:hover {
+            background: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+        }
+        .button-secondary { background: var(--color-secondary); }
+        .button-secondary:hover { background: #047857; }
+        input[type="email"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 1.1rem 1.5rem;
+            font-size: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            margin: 1rem 0;
+            transition: border-color 0.2s;
+        }
+        input[type="email"]:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        /* Trust Elements */
+        .trust-note {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-top: 1.5rem;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .testimonial {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial i { color: #f59e0b; margin-right: 0.25rem; } /* Star icons */
+
+        /* FAQ */
+        .faq-container { margin-top: 2rem; text-align: left; }
+        .faq-item { margin-bottom: 1.5rem; }
+        .faq-question { font-weight: 600; margin-bottom: 0.5rem; color: var(--color-primary); }
+
+        /* App Mockup Placeholder - CRITICAL */
+        .app-mockup {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            margin: 3rem auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="section">
+            <div class="card hero-card">
+                <h1>Tame Your Digital Shame Pile.</h1>
+                <p>Clarity is your AI-powered Chief of Staff. Get one calm, curated daily briefing from the chaos of your inbox, podcasts, and saved content.</p>
+                
+                <!-- THE CRITICAL HERO VISUAL -->
+                <div class="app-mockup">
+                    [ screenshot of Clarity's "Daily Briefing" dashboard ]
+                </div>
+
+                <button class="button">Join the Waitlist →</button>
+                <p class="trust-note">Join 1,500+ professionals reclaiming their focus.</p>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section class="section text-center">
+            <h2>Does This Feel Familiar?</h2>
+            <p>The constant, low-grade anxiety of a digital life out of control.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <h3>"My 'Read Later' list is a graveyard of good intentions."</h3>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="testimonial">
+                    <h3>"I miss important emails because my inbox is a warzone."</h3>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="testimonial">
+                    <h3>"I've paid for courses I've never started. It's a guilt trip."</h3>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works -->
+        <section class="section">
+            <div class="card">
+                <h2 class="text-center">How it works</h2>
+                <div class="testimonial-grid">
+                    <div class="text-center">
+                        <h3>🔗 Connect</h3>
+                        <p>Securely link your apps in minutes. (Gmail, Spotify, Pocket, and more).</p>
+                    </div>
+                    <div class="text-center">
+                        <h3>✨ Curate</h3>
+                        <p>Our AI works overnight to summarize, prioritize, and declutter your digital chaos.</p>
+                    </div>
+                    <div class="text-center">
+                        <h3>🎯 Conquer</h3>
+                        <p>Wake up to your one-page briefing and a calm, focused day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section">
+            <div class="card text-center">
+                <h2>Ready to Find Your Clarity?</h2>
+                <p>Join the waitlist for early access and a lifetime launch discount.</p>
+                <form>
+                    <input type="email" placeholder="Your best email address" required>
+                    <br>
+                    <button type="submit" class="button button-secondary">Get Early Access</button>
+                </form>
+                <p class="trust-note"><i class="fas fa-shield-alt"></i> Your data is yours. We never sell it. Bank-level encryption.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section">
+            <div class="card">
+                <h2 class="text-center">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <p class="faq-question">Which apps do you connect to?</p>
+                        <p>Gmail, Outlook, Spotify, Apple Podcasts, Pocket, Instapaper, Kindle, and more. Our list is growing every week.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Is my data secure?</p>
+                        <p>Absolutely. We use bank-level encryption (AES-256) and never store your login credentials on our servers. Your privacy is our #1 priority.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">When will I get access?</p>
+                        <p>We're rolling out the first wave of access to waitlist members in Q2 2025.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Simple form submission feedback
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert("Thank you! We've added " + email + " to the waitlist. You'll be the first to know when we launch.");
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
